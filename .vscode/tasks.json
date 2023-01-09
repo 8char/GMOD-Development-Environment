@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Download Server",
+            "type": "shell",
+            "command": "powershell -executionpolicy remotesigned -File _scripts/Install-Server.ps1"
+        },
+        {
+            "label": "Download AtlasFramework",
+            "type": "shell",
+            "command": "powershell -executionpolicy remotesigned -File _scripts/Download-Framework.ps1"
+        },
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "presentation": {
+                "reveal": "never"
+            },
+            "command": "powershell -executionpolicy remotesigned -File _scripts/Run-Server.ps1 -dev"
+        },
+        {
+            "label": "Reset Data",
+            "type": "shell",
+            "presentation": {
+                "reveal": "never"
+            },
+            "command": "powershell -executionpolicy remotesigned -File _scripts/Reset-Data.ps1"
+        },
+        {
+            "label": "Connect",
+            "type": "shell",
+            "presentation": {
+                "reveal": "never"
+            },
+            "command": "explorer steam://connect/127.0.0.1/"
+        },
+    ]
+}
