@@ -34,6 +34,9 @@ Remove-Item $zipFile
 "=== Downloading Server ==="
 _server/steamcmd/steamcmd.exe +force_install_dir ../gmod +login anonymous +app_update 4020 +quit
 
+"=== Installing DarkRP ==="
+_scripts/Download-DarkRP.ps1
+
 _scripts/Atlas-Framework.ps1
 
 "=== Finished Download ==="
