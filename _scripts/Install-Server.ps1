@@ -1,3 +1,18 @@
+# Create the addons directory
+New-Item -ItemType Directory -Path "addons" -ErrorAction SilentlyContinue
+
+# Create the cfg directory
+New-Item -ItemType Directory -Path "cfg" -ErrorAction SilentlyContinue
+
+# Create the gamemodes directory
+New-Item -ItemType Directory -Path "gamemodes" -ErrorAction SilentlyContinue
+
+# Create the lua directory
+New-Item -ItemType Directory -Path "lua" -ErrorAction SilentlyContinue
+
+# Create the maps directory
+New-Item -ItemType Directory -Path "maps" -ErrorAction SilentlyContinue
+
 New-Item -ItemType Directory -Force -Path "_server/gmod/garrysmod" | Out-Null
 
 "=== Mounting Folders ==="
